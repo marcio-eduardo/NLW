@@ -8,12 +8,12 @@ const db = new sqlite3.Database("./src/database/database.db")
 module.exports = db
 
 //utilizar o objeto de banco de dados para nossas operações
-/* db.serialize(() => {
+db.serialize(() => {
     
     //com comandos sql:
     
     // 1 criar uma tabela 
-    db.run(`
+    /* db.run(`
         CREATE TABLE IF NOT EXISTS  places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             image TEXT,
@@ -54,14 +54,14 @@ module.exports = db
 
         console.log("Cadastro com sucesso")
         console.log(this)
-    }
+    } */
 
     //db.run(query, values, afterInsertData)
     
    
 
     //4 deletar um dado da tabela
-    db.run(`DELETE FROM places WHERE id = ?`, [2], function(err){
+    db.run(`DELETE FROM places WHERE id = ?`, [6], function(err){
         if(err) {
             return console.log(err)
         }
@@ -78,4 +78,4 @@ module.exports = db
         console.log(rows)
     })
 
-})  */
+}) 

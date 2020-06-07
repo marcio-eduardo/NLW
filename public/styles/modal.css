@@ -85,9 +85,12 @@
     border-radius: 0 8px 8px 0;
 }
 
-#modal form button:border {
+#modal form button:hover {
     background-color: #2fb85e;
 }
+
+/* Isto é para o modal point created*/
+
 
 #modal.point .content {
     display: flex;
@@ -95,7 +98,7 @@
     align-items: center;
 }
 
-#modal.point {
+#modal.point h1 {
     color: white;
 
     margin-top: 32px;
